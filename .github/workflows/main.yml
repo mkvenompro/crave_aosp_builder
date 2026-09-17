@@ -13,13 +13,14 @@ on:
       BASE_PROJECT:
         description: 'Choose a base project:'
         required: true
-        default: 'LineageOS 21.0'
+        default: 'LineageOS 23.2'
         type: choice
         options:
           - 'crDroid 13.0'
           - 'LineageOS 20.0'
           - 'LineageOS 21.0'
           - 'LineageOS 22.1'
+          - 'LineageOS 23.2'
           - 'ArrowOS 13.1'
           - 'DerpFest 14.0'
           - 'CipherOS 14'
@@ -114,6 +115,11 @@ jobs:
           export PROJECTFOLDER="/crave-devspaces/Lineage22"
           export PROJECTID="93"
           export REPO_INIT="repo init -u https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
+        ;;
+        "LineageOS 23.2")
+          export PROJECTFOLDER="/crave-devspaces/Lineage23"
+          export PROJECTID="99"
+          export REPO_INIT="repo init -u https://github.com/accupara/los23.2.git -b lineage-23.2 --git-lfs --depth=1"
         ;;
         "crDroid 13.0")
           export PROJECTFOLDER="/crave-devspaces/crDroid13"
